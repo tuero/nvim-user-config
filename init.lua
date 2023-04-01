@@ -18,7 +18,8 @@ return {
   },
 
   -- Set colorscheme to use
-  colorscheme = "astrodark",
+  colorscheme = "onedark",
+--   colorscheme = "astrodark",
 
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
   diagnostics = {
@@ -43,9 +44,9 @@ return {
         -- "sumneko_lua",
       },
       timeout_ms = 1000, -- default format timeout
-      -- filter = function(client) -- fully override the default formatting function
-      --   return true
-      -- end
+    -- filter = function(client) -- fully override the default formatting function
+    --   return true
+    -- end
     },
     -- enable servers that you already have installed without mason
     servers = {
@@ -68,17 +69,27 @@ return {
   -- augroups/autocommands and custom filetypes also this just pure lua so
   -- anything that doesn't fit in the normal config locations above can go here
   polish = function()
+    vim.cmd [[highlight IndentBlanklineChar guifg=Whitespace gui=nocombine]]
+    -- vim.api.nvim_create_autocmd("UIEnter", {
+    --     callback = function()
+    --         local stats = require("lazy").stats()
+    --         local ms = math.floor(stats.startuptime * 100 + 0.5) / 100
+    --         opts.section.footer.val =
+    --         { " ", " ", " ", "Loaded " .. stats.count .. " plugins   in " .. ms .. "ms" }
+    --         opts.section.footer.opts.hl = "DashboardFooter"
+    --     end,
+    -- })
     -- Set up custom filetypes
-    -- vim.filetype.add {
-    --   extension = {
-    --     foo = "fooscript",
-    --   },
+    vim.filetype.add {
+      extension = {
+        cppm = "cpp",
+      },
     --   filename = {
     --     ["Foofile"] = "fooscript",
     --   },
     --   pattern = {
     --     ["~/%.config/foo/.*"] = "fooscript",
     --   },
-    -- }
+    }
   end,
 }
