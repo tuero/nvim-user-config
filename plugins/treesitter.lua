@@ -16,7 +16,7 @@ return {
             'python', 
             'rust', 
             'typescript', 
-            'help' 
+            'vimdoc' 
         },
         highlight = { 
             enable = true,
