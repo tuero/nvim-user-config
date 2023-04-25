@@ -14,6 +14,7 @@ return {
                     ["@lsp.type.variable"] = {fg = '$fg'},
                     ["@lsp.type.property"] = {fg = '$cyan'},
                     ["@lsp.type.macro"] = {fg = '$turquoise', fmt = 'bold'},
+                    ["@lsp.type.typeParameter"] = {fg = '$yellow', fmt = 'bold,italic'},
                 }
             }
             require('onedark').load()
