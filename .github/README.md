@@ -34,3 +34,6 @@ git clone https://github.com/<your_user>/<your_repository> ~/.config/nvim/lua/us
 ```shell
 nvim
 ```
+
+clangd gets installed to ~/.local/share/nvim/mason/bin
+Create a symlink to the clangd version used by system

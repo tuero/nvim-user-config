@@ -66,6 +66,13 @@ return {
                 },
             },
         }
+        opts.statuscolumn = {
+          status.component.foldcolumn(),
+          {
+            provider = function() return "%l %=%r " end,
+          },
+          status.component.signcolumn(),
+        }
 
         return opts
     end,
