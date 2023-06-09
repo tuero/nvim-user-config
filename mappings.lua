@@ -46,8 +46,6 @@ return {
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
-    ["<M-k>"] = {":m .-2<CR>==", desc = "move line up"},
-    ["<M-j>"] = {":m .+1<CR>==", desc = "move line down"},
     ["<M-o>"] = {
       function()
         if vim.bo.filetype == "cpp" or vim.bo.filetype == "cxx" or vim.bo.filetype == "c" then
@@ -69,10 +67,6 @@ return {
     ["<leader>pf"] = {":r ~/.vbuf<CR>", desc = "paste from file"}
   },
   v = {
-    ["<M-k>"] = {":m '<-2<CR>gv=gv", desc = "move line up"},
-    ["<M-j>"] = {":m '>+1<CR>gv=gv", desc = "move line down"},
-    ["<"] = {"<gv", desc = "unindent left"},
-    [">"] = {">gv", desc = "indent right"},
     ["<leader>cf"] = {":w! ~/.vbuf<CR>", desc = "copy to file"}
   },
   t = {

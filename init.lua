@@ -52,6 +52,10 @@ return {
     servers = {
       -- "pyright"
     },
+    -- setup_handlers = {
+    --   -- add custom handler
+    -- --   rust_analyzer = function(_, opts) require("rust-tools").setup { server = opts } end
+    -- },
   },
 
   -- Configure require("lazy").setup() options
@@ -70,6 +74,18 @@ return {
   -- anything that doesn't fit in the normal config locations above can go here
   polish = function()
     vim.cmd [[highlight IndentBlanklineChar guifg=Whitespace gui=nocombine]]
+
+    -- local rt = require("rust-tools")
+    -- rt.setup({
+    -- server = {
+    --     on_attach = function(_, bufnr)
+    --     -- Hover actions
+    --     vim.keymap.set("n", "<C-space>", rt.hover_actions.hover_actions, { buffer = bufnr })
+    --     -- Code action groups
+    --     vim.keymap.set("n", "<Leader>a", rt.code_action_group.code_action_group, { buffer = bufnr })
+    --     end,
+    -- },
+    -- })
     -- vim.api.nvim_create_autocmd("UIEnter", {
     --     callback = function()
     --         local stats = require("lazy").stats()
