@@ -42,7 +42,7 @@ return {
     }
     
     dashboard.section.footer.val =
-        { " ", " f", " ", "loaded " .. require("lazy").stats().count .. " plugins " }
+        { " ", " ", " ", "Loaded " .. require("lazy").stats().count .. " plugins  " }
     dashboard.section.footer.opts.hl = "DashboardFooter"
     
     dashboard.config.layout[1].val = vim.fn.max { 2, vim.fn.floor(vim.fn.winheight(0) * 0.2) }
