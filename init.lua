@@ -52,6 +52,24 @@ return {
     servers = {
       -- "pyright"
     },
+    -- config = {
+    --     clangd = {
+    --         cmd = {
+    --             "clangd",
+    --             "--background-index",
+    --             "--suggest-missing-includes",
+    --             "--clang-tidy",
+    --             "--header-insertion=iwyu",
+    --             "--completion-style=detailed"
+    --         },
+    --         init_options = {
+    --             clangdFileStatus = true,
+    --             usePlaceholders = true,
+    --             completeUnimported = true,
+    --             semanticHighlighting = true,
+    --         },
+    --     }
+    -- }
     -- setup_handlers = {
     --   -- add custom handler
     -- --   rust_analyzer = function(_, opts) require("rust-tools").setup { server = opts } end
