@@ -43,6 +43,15 @@ return {
             require('mini.move').setup()
         end,
     },
+    {
+        "rktjmp/lush.nvim", 
+        lazy = false,
+    },
+    {
+        "mcchrish/zenbones.nvim", 
+        lazy = false,
+        requires = "rktjmp/lush.nvim"
+    },
     -- {
     --     "simrat39/rust-tools.nvim",
     --     after = { "mason-lspconfig.nvim" },

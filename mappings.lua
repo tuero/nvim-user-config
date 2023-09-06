@@ -64,7 +64,21 @@ return {
       end,
       desc = "Format",
     },
-    ["<leader>pf"] = {":r ~/.vbuf<CR>", desc = "paste from file"}
+    ["<leader>pf"] = {":r ~/.vbuf<CR>", desc = "paste from file"},
+    ["<leader>uT"] = {
+        function()
+            if(vim.api.nvim_get_var("colors_name") == "onedark") then
+                vim.api.nvim_command("colorscheme default")
+                vim.api.nvim_command("set background=light")
+                vim.api.nvim_command("colorscheme zenbones")
+            else
+                vim.api.nvim_command("colorscheme default")
+                vim.api.nvim_command("set background=dark")
+                vim.api.nvim_command("colorscheme onedark")
+            end
+        end,
+        desc = "Toggle Theme",
+      },
   },
   v = {
     ["<leader>cf"] = {":w! ~/.vbuf<CR>", desc = "copy to file"}
