@@ -11,6 +11,7 @@ return {
     tabstop = 4,
     softtabstop = 4,
     shiftwidth = 4,
+    expandtab = true, -- convert tab to spaces
   },
   g = {
     mapleader = " ", -- sets vim.g.mapleader
